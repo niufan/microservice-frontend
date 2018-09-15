@@ -2,7 +2,7 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 
 import { CdkTableModule } from '@angular/cdk/table';
 
-import {MatTableModule, MatPaginatorModule, MAT_PAGINATOR_INTL_PROVIDER, MatPaginatorIntl} from '@angular/material';
+import {MatTableModule, MatPaginatorModule, MatPaginatorIntl, MatCheckboxModule} from '@angular/material';
 
 import { ResourceRoutingModule } from './resource-routing.module';
 
@@ -42,7 +42,7 @@ function MAT_PAGINATOR_INTL_PROVIDER_FACTORY(parentIntl: MatPaginatorIntl): MatP
     CdkTableModule,
     MatTableModule,
     MatPaginatorModule,
-
+    MatCheckboxModule,
     ResourceRoutingModule
   ],
   exports: [
