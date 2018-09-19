@@ -1,14 +1,28 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { CdkTableModule } from '@angular/cdk/table';
 
-import {MatTableModule, MatPaginatorModule, MatPaginatorIntl, MatCheckboxModule} from '@angular/material';
+import {
+  MatTableModule,
+  MatPaginatorModule,
+  MatPaginatorIntl,
+  MatCheckboxModule,
+  MatMenuModule,
+  MatButtonModule,
+  MatIconModule
+} from '@angular/material';
+
+import { CommonModule } from '../common/common.module';
 
 import { ResourceRoutingModule } from './resource-routing.module';
 
 import { ResourceComponent } from './resource.component';
 
 import { ResourcePageComponent } from './page/resource-page.component';
+
+import { MenuService } from './menu.service';
 
 function MAT_PAGINATOR_INTL_PROVIDER_FACTORY(parentIntl: MatPaginatorIntl): MatPaginatorIntl {
   let intl: MatPaginatorIntl;
@@ -39,10 +53,17 @@ function MAT_PAGINATOR_INTL_PROVIDER_FACTORY(parentIntl: MatPaginatorIntl): MatP
     ResourcePageComponent
   ],
   imports: [
+    HttpClientModule,
+
     CdkTableModule,
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+
+    CommonModule,
     ResourceRoutingModule
   ],
   exports: [
@@ -54,7 +75,8 @@ function MAT_PAGINATOR_INTL_PROVIDER_FACTORY(parentIntl: MatPaginatorIntl): MatP
       provide: MatPaginatorIntl,
       deps: [[new Optional(), new SkipSelf(), MatPaginatorIntl]],
       useFactory: MAT_PAGINATOR_INTL_PROVIDER_FACTORY
-    }
+    },
+    MenuService
   ]
 })
 export class ResourceModule { }

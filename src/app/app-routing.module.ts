@@ -3,19 +3,27 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'resource',
-    loadChildren: './resource/resource.module#ResourceModule'
+    path: 'asc',
+    loadChildren: './asc/asc.module#AscModule'
   },
   {
-    path: '**',
-    redirectTo: 'resource'
+    path: 'login',
+    redirectTo: 'asc/login'
+  },
+  {
+    path: 'error',
+    loadChildren: './error/error.module#ErrorModule'
+  },
+  {
+    path: 'app',
+    loadChildren: './integration/integration.module#IntegrationModule'
   }
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      enableTracing: true // for debug
+      enableTracing: true // true for debug
     })
   ],
   exports: [
