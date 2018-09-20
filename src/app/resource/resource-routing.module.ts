@@ -12,6 +12,10 @@ const routes: Routes = [
       {
         path: 'page',
         component: ResourcePageComponent
+      },
+      {
+        path: '',
+        redirectTo: 'page'
       }
     ]
   }
