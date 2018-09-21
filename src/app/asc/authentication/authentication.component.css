@@ -1,0 +1,28 @@
+.sign-in {
+  height: 100%;
+  background: transparent url('/src/assets/bg/bg0.jpg') repeat;
+  background-size: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  /*padding-top: 40px;*/
+  /*padding-bottom: 40px;*/
+  text-align: center !important;
+}
+.sign-in-form {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.sign-in-form .invalid-feedback {
+  text-align: left;
+}
+.example-header-image {
+  background-image: url('/src/assets/logo.png');
+  background-size: cover;
+}
+mat-list-item {
+  margin-bottom: 20px;
+}

@@ -14,7 +14,7 @@ import {
   MatIconModule
 } from '@angular/material';
 
-import { CommonModule } from '../common/common.module';
+import { MicroserviceCommonModule } from '../common/microservice-common.module';
 
 import { ResourceRoutingModule } from './resource-routing.module';
 
@@ -63,7 +63,7 @@ function MAT_PAGINATOR_INTL_PROVIDER_FACTORY(parentIntl: MatPaginatorIntl): MatP
     MatButtonModule,
     MatIconModule,
 
-    CommonModule,
+    MicroserviceCommonModule,
     ResourceRoutingModule
   ],
   exports: [

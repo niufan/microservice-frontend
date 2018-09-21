@@ -9,4 +9,4 @@ import { CacheService } from './cache.service';
     { provide: CacheService, useFactory: function() { return new CacheService(); } }
     ]
 })
-export class CommonModule {}
+export class MicroserviceCommonModule {}
