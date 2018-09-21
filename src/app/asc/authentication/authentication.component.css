@@ -19,7 +19,7 @@
 .sign-in-form .invalid-feedback {
   text-align: left;
 }
-.example-header-image {
+.sign-in-form .header-image {
   background-image: url('/src/assets/logo.png');
   background-size: cover;
 }
